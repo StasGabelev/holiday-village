@@ -135,12 +135,16 @@ header.scrolled {
 @media (min-width: 1024px) { .hdr-inner { padding: 20px 64px; } }
 
 .logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem; font-weight: 600; letter-spacing: 2px;
-  text-transform: uppercase; color: #fff;
-  transition: color .35s; flex-shrink: 0;
+  display: flex; align-items: center;
+  flex-shrink: 0; transition: opacity .3s;
 }
-header.scrolled .logo { color: var(--forest); }
+.logo:hover { opacity: 0.85; }
+.logo-img {
+  height: 44px; width: auto;
+  filter: brightness(0) invert(1);
+  transition: filter .35s;
+}
+header.scrolled .logo-img { filter: none; }
 
 .desk-nav { display: none; gap: 28px; align-items: center; }
 @media (min-width: 900px) { .desk-nav { display: flex; } }

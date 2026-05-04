@@ -87,7 +87,7 @@ const T = {
     contact_tag: "Kontakt", contact_title: "Znajdź nas",
     contact_phone_label: "Telefon", contact_addr_label: "Adres",
     contact_hours_label: "Godziny otwarcia",
-    contact_hours: "Codziennie 9:00–20:00 (maj–wrzesień)",
+    contact_hours: "Codziennie 10:00–20:00 (maj–wrzesień)",
     footer_tagline: "Dwa jeziora, jeden cel: Twój spokój.",
   },
 
@@ -184,7 +184,7 @@ const T = {
     contact_tag: "Контакти", contact_title: "Знайди нас",
     contact_phone_label: "Телефон", contact_addr_label: "Адреса",
     contact_hours_label: "Години роботи",
-    contact_hours: "Щодня 9:00–20:00 (травень–вересень)",
+    contact_hours: "Щодня 10:00–20:00 (травень–вересень)",
     footer_tagline: "Два озера, одна ціль: твій спокій.",
   },
 
@@ -281,7 +281,7 @@ const T = {
     contact_tag: "Contact", contact_title: "Find Us",
     contact_phone_label: "Phone", contact_addr_label: "Address",
     contact_hours_label: "Opening Hours",
-    contact_hours: "Daily 9:00–20:00 (May–September)",
+    contact_hours: "Daily 10:00–20:00 (May–September)",
     footer_tagline: "Two lakes, one goal: your peace of mind.",
   },
 
@@ -378,7 +378,7 @@ const T = {
     contact_tag: "Контакты", contact_title: "Найди нас",
     contact_phone_label: "Телефон", contact_addr_label: "Адрес",
     contact_hours_label: "Часы работы",
-    contact_hours: "Ежедневно 9:00–20:00 (май–сентябрь)",
+    contact_hours: "Ежедневно 10:00–20:00 (май–сентябрь)",
     footer_tagline: "Два озера, одна цель: твой покой.",
   }
 };
