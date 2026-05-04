@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holiday Village – Piknik, Wędkarstwo, Mini Zoo | Zaborowie k. Radomia</title>
+<meta name="description" content="Holiday Village – dwa jeziora, wędkarstwo, kontaktowe mini zoo, plac zabaw, grill. Zarezerwuj altankę nad jeziorem już teraz!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── MOBILE STICKY CTA ── -->
+<div class="sticky-bar">
+  <a href="tel:+48123456789" class="sticky-call" data-i18n="cta_call">📞 Zadzwoń</a>
+  <a href="#lead" class="sticky-book" data-i18n="cta_book">📅 Rezerwuj</a>
+</div>
+
+<!-- ── HEADER ── -->
+<header id="hdr">
+  <div class="hdr-inner">
+    <a href="#" class="logo" data-i18n="site_name">Holiday Village</a>
+
+    <nav class="desk-nav">
+      <a href="#offer"   data-i18n="nav_offer">Oferta</a>
+      <a href="#lakes"   data-i18n="nav_lakes">Jeziora</a>
+      <a href="#zoo"     data-i18n="nav_zoo">Mini Zoo</a>
+      <a href="#prices"  data-i18n="nav_prices">Cennik</a>
+      <a href="#contact" data-i18n="nav_contact">Kontakt</a>
+    </nav>
+
+    <div class="hdr-right">
+      <div class="lang-bar">
+        <button class="lbtn active" data-lang="pl">PL</button>
+        <button class="lbtn" data-lang="ua">UA</button>
+        <button class="lbtn" data-lang="en">EN</button>
+        <button class="lbtn" data-lang="ru">RU</button>
+      </div>
+      <a href="tel:+48123456789" class="btn-hdr desk-only" data-i18n="cta_call">📞 Zadzwoń</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile nav -->
+  <nav class="mob-nav" id="mob-nav">
+    <a href="#offer"   data-i18n="nav_offer">Oferta</a>
+    <a href="#lakes"   data-i18n="nav_lakes">Jeziora</a>
+    <a href="#zoo"     data-i18n="nav_zoo">Mini Zoo</a>
+    <a href="#prices"  data-i18n="nav_prices">Cennik</a>
+    <a href="#contact" data-i18n="nav_contact">Kontakt</a>
+    <a href="tel:+48123456789" class="btn-hdr" style="align-self:flex-start;margin-top:4px;" data-i18n="cta_call">📞 Zadzwoń</a>
+  </nav>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <img class="hero-bg" src="images/photo_2026-04-29_11-10-12.jpg" alt="Holiday Village">
+  <div class="hero-grad"></div>
+  <div class="hero-content">
+    <span class="hero-tag" data-i18n="hero_badge">🌿 Sezon otwarty · maj–wrzesień 2025</span>
+    <h1 data-i18n="hero_title">Twój azyl<br>w sercu <em>lasu</em></h1>
+    <p class="hero-sub" data-i18n="hero_subtitle">Dwa jeziora · Mini Zoo · Grill · Plac zabaw · Wędkarstwo</p>
+    <div class="hero-btns">
+      <a href="#lead"            class="btn-gold btn-lg" data-i18n="cta_book">📅 Zarezerwuj stolik</a>
+      <a href="tel:+48123456789" class="btn-ghost btn-lg" data-i18n="cta_call">📞 Zadzwoń</a>
+    </div>
+    <div class="hero-phone">+48 123 456 789</div>
+  </div>
+  <div class="hero-scroll">↓</div>
+</section>
+
+<!-- ── MARQUEE STRIP ── -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marquee-track">
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_tables">Altanki</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_zoo">Mini Zoo</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_fishing">Wędkarstwo</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_bbq">Grill / Mangal</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_lakes">Dwa jeziora</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_playground">Plac zabaw</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_shop">Sklep & Bar</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_tables">Altanki</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_zoo">Mini Zoo</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_fishing">Wędkarstwo</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_bbq">Grill / Mangal</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_lakes">Dwa jeziora</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_playground">Plac zabaw</span></span>
+    <span class="m-item"><span class="m-dot">✦</span> <span data-i18n="trust_shop">Sklep & Bar</span></span>
+  </div>
+</div>
+
+<!-- ── INTRO ── -->
+<section class="intro fade-in">
+  <div class="wrap">
+    <div class="intro-text">
+      <div class="tag-label" data-i18n="intro_tag">Witamy w Holiday Village</div>
+      <h2 data-i18n="intro_title">Miejsce, gdzie<br>czas płynie <em>wolniej</em></h2>
+      <p data-i18n="intro_p1">Dwa jeziora otoczone lasem, drewniane altanki z ławkami, kontaktowe mini zoo i grill przy ogniu.</p>
+      <p data-i18n="intro_p2">Bez nocowania. Bez komplikacji. Przyjeżdżasz, rezerwujesz stolik, rozpalasz grill — i po prostu jesteś.</p>
+      <a href="#lead" class="btn-gold" style="margin-top:28px;" data-i18n="intro_cta">Zarezerwuj dzień →</a>
+    </div>
+    <div class="intro-img-wrap">
+      <img src="images/photo_2026-04-29_11-10-42.jpg" alt="Teren Holiday Village" loading="lazy">
+      <div class="intro-badge">
+        <strong>2</strong>
+        <span data-i18n="trust_lakes">Jeziora</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OFFER STORIES ── -->
+<section id="offer">
+
+  <!-- 01 ALTANKI -->
+  <div class="story story-light fade-in">
+    <div class="wrap story-head">
+      <div class="story-left">
+        <div class="story-num">01</div>
+        <div class="tag-label" data-i18n="nav_offer">Oferta</div>
+        <h2 data-i18n="story_tables_title">Altanki<br>i miejsca nad<br><em>jeziorem</em></h2>
+      </div>
+      <p class="story-desc" data-i18n="story_tables_desc">Zadaszone altanki z drewnianymi stolikami i ławkami — nad samym brzegiem jeziora. Idealne dla rodzin, grup przyjaciół i tych, którzy lubią jeść na świeżym powietrzu.</p>
+    </div>
+    <div class="story-photo-full">
+      <img src="images/photo_2026-04-29_11-10-47.jpg" alt="Altanki wieczorem" loading="lazy">
+    </div>
+    <div class="wrap story-strip">
+      <img src="images/photo_2026-04-29_11-10-39.jpg" alt="Rustykalny stół" loading="lazy">
+      <img src="images/photo_2026-04-29_11-10-40.jpg" alt="Stoliki w lesie"  loading="lazy">
+    </div>
+  </div>
+
+  <!-- 02 MINI ZOO -->
+  <div class="story story-dark fade-in">
+    <div class="wrap story-head story-head-center">
+      <div class="story-num story-num-light">02</div>
+      <div class="tag-label light" data-i18n="zoo_tag">Dla dzieci</div>
+      <h2 data-i18n="story_zoo_title">Kontaktowe<br>mini zoo <em>🐐</em></h2>
+      <p class="story-desc story-desc-light" data-i18n="story_zoo_desc">Nakarm kozy, pogłaszcz króliki i spędź czas blisko natury. Bezpieczne, przyjazne, niezapomniane — dla całej rodziny.</p>
+    </div>
+    <div class="story-photo-full">
+      <img src="images/playground.jpg" alt="Mini Zoo i plac zabaw" loading="lazy">
+    </div>
+  </div>
+
+  <!-- 03 DZIECI / PLAC ZABAW -->
+  <div id="kids" class="story story-light fade-in">
+    <div class="wrap story-head">
+      <div class="story-left">
+        <div class="story-num">03</div>
+        <div class="tag-label" data-i18n="kids_tag">Dla dzieci</div>
+        <h2 data-i18n="story_kids_title">Raj dla<br>małych<br><em>odkrywców</em></h2>
+      </div>
+      <p class="story-desc" data-i18n="story_kids_desc">Rozległy plac zabaw, trampoliny i bezpieczna strefa nad jeziorem — dzieci są zachwycone, a Ty możesz spokojnie wypocząć przy grillu lub wędce.</p>
+    </div>
+    <div class="story-photo-full">
+      <img src="images/lake-swings.jpg" alt="Dzieci na huśtawkach nad jeziorem" loading="lazy">
+    </div>
+    <div class="wrap story-strip">
+      <img src="images/photo_2026-04-29_11-10-45.jpg" alt="Dzieci nad jeziorem" loading="lazy">
+      <img src="images/playground.jpg" alt="Plac zabaw" loading="lazy">
+    </div>
+    <div class="bar-blocks">
+      <div class="bar-block">
+        <span class="bar-icon">🛝</span>
+        <strong data-i18n="kids_playground">Plac zabaw</strong>
+      </div>
+      <div class="bar-block">
+        <span class="bar-icon">🤸</span>
+        <strong data-i18n="kids_trampoline">Trampoliny</strong>
+      </div>
+      <div class="bar-block">
+        <span class="bar-icon">🌊</span>
+        <strong data-i18n="kids_swim">Kąpielisko</strong>
+      </div>
+      <div class="bar-block">
+        <span class="bar-icon">🐑</span>
+        <strong data-i18n="kids_minizoo">Mini Zoo</strong>
+      </div>
+      <div class="bar-block">
+        <span class="bar-icon">🎣</span>
+        <strong data-i18n="kids_fishing">Wędkarstwo</strong>
+      </div>
+    </div>
+    <p class="story-kids-quote" data-i18n="kids_quote">Dzieci się bawią — Ty odpoczywasz. 🌿</p>
+  </div>
+
+  <!-- 04 GRILL -->
+  <div class="story story-warm fade-in">
+    <div class="wrap story-split">
+      <div class="story-split-text">
+        <div class="story-num">04</div>
+        <div class="tag-label" data-i18n="offer_bbq_title">Grill / Mangal</div>
+        <h2 data-i18n="story_bbq_title">Rozpal ogień,<br>zaproś <em>znajomych</em></h2>
+        <p data-i18n="story_bbq_desc">Wynajem grilli i mangali na miejscu. Przywieź własne jedzenie lub kup w sklepie. Węgiel dostępny na miejscu.</p>
+        <a href="#lead" class="btn-gold" style="margin-top:28px;" data-i18n="cta_book">📅 Rezerwuj</a>
+      </div>
+      <div class="story-split-photo">
+        <img src="images/photo_2026-04-29_11-10-37.jpg" alt="Grill i mangal" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 SKLEP & BAR -->
+  <div class="story story-bar fade-in">
+    <div class="wrap story-head story-head-center">
+      <div class="story-num">05</div>
+      <div class="tag-label" data-i18n="offer_shop_title">Sklep & Bar</div>
+      <h2 data-i18n="story_bar_title">Wszystko,<br>czego <em>potrzebujesz</em></h2>
+    </div>
+    <div class="bar-blocks">
+      <div class="bar-block">
+        <span class="bar-icon">🍦</span>
+        <strong data-i18n="bar_icecream">Lody</strong>
+      </div>
+      <div class="bar-block">
+        <span class="bar-icon">🍺</span>
+        <strong data-i18n="bar_beer">Zimne piwo</strong>
+      </div>
+      <div class="bar-block">
+        <span class="bar-icon">💧</span>
+        <strong data-i18n="bar_water">Woda</strong>
+      </div>
+      <div class="bar-block">
+        <span class="bar-icon">🥜</span>
+        <strong data-i18n="bar_snacks">Przekąski</strong>
+      </div>
+      <div class="bar-block">
+        <span class="bar-icon">☕</span>
+        <strong data-i18n="bar_coffee">Kawa & Herbata</strong>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── PRICES ── -->
+<section id="prices" class="prices-section fade-in">
+  <div class="wrap">
+    <div class="prices-head">
+      <h2 data-i18n="prices_title">Cennik</h2>
+      <span data-i18n="prices_sub">Przejrzyste ceny</span>
+    </div>
+    <div class="price-list">
+      <div class="price-row">
+        <span class="price-num">01</span>
+        <div class="price-info">
+          <strong data-i18n="price_entry_title">Wstęp na teren</strong>
+          <span data-i18n="price_entry_desc">Dostęp do jeziora, placu zabaw i mini zoo</span>
+        </div>
+        <span class="price-val">30–40 zł</span>
+      </div>
+      <div class="price-row">
+        <span class="price-num">02</span>
+        <div class="price-info">
+          <strong data-i18n="price_table_title">Altanka z ławkami</strong>
+          <span data-i18n="price_table_desc">Zadaszone miejsce nad brzegiem — na godziny lub cały dzień</span>
+        </div>
+        <span class="price-val">od 50 zł</span>
+      </div>
+      <div class="price-row">
+        <span class="price-num">03</span>
+        <div class="price-info">
+          <strong data-i18n="price_bbq_title">Grill / Mangal</strong>
+          <span data-i18n="price_bbq_desc">Wynajem grilla, węgiel dostępny na miejscu</span>
+        </div>
+        <span class="price-val">od 30 zł</span>
+      </div>
+      <div class="price-row">
+        <span class="price-num">04</span>
+        <div class="price-info">
+          <strong data-i18n="price_fishing_title">Wędkarstwo + wędka</strong>
+          <span data-i18n="price_fishing_desc">Zarybione jezioro, cisza i gwarancja połowu</span>
+        </div>
+        <span class="price-val">od 20 zł</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LAKES SPLIT ── -->
+<section id="lakes" class="split-section fade-in">
+  <div class="split-photo">
+    <img src="images/photo_2026-04-29_11-10-41.jpg" alt="Jezioro o zachodzie" loading="lazy">
+  </div>
+  <div class="split-content">
+    <div class="tag-label light" data-i18n="lakes_tag">Nasze jeziora</div>
+    <h2 data-i18n="lakes_title">Dwa jeziora,<br>dwa <em>nastroje</em></h2>
+    <p data-i18n="lake_swim_desc">Jezioro kąpielowe z huśtawkami i piaszczystą plażą dla rodzin. Idealne na gorące letnie dni.</p>
+    <p data-i18n="lake_fish_desc" style="margin-top:12px;">Spokojne, zarybione jezioro dla wędkarzy. Wynajem wędek na miejscu.</p>
+    <div class="lake-stats">
+      <div class="lstat"><strong>2</strong><span data-i18n="trust_lakes">Jeziora</span></div>
+      <div class="lstat"><strong>🐟</strong><span data-i18n="stat_stocked">Zarybione</span></div>
+      <div class="lstat"><strong>🏊</strong><span data-i18n="stat_swim">Kąpielowe</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LAKE PHOTO STRIP ── -->
+<div class="lake-strip fade-in">
+  <img src="images/photo_2026-04-29_11-10-45.jpg" alt="Dzieci nad jeziorem" loading="lazy">
+  <img src="images/photo_2026-04-29_11-10-46.jpg" alt="Jezioro"             loading="lazy">
+  <img src="images/photo_2026-04-29_11-10-48.jpg" alt="Panorama terenu"     loading="lazy">
+</div>
+
+<!-- ── MINI ZOO ── -->
+<section id="zoo" class="zoo-section fade-in">
+  <div class="wrap zoo-inner">
+    <div class="zoo-img">
+      <img src="images/playground.jpg" alt="Mini Zoo i plac zabaw" loading="lazy">
+    </div>
+    <div class="zoo-text">
+      <div class="tag-label" data-i18n="zoo_tag">Dla dzieci</div>
+      <h2 data-i18n="zoo_title">Mini Zoo<br>kontaktowe 🐐</h2>
+      <p data-i18n="zoo_desc">Nakarm kozy, pogłaszcz króliki i spędź czas blisko natury. Bezpieczne, przyjazne, niezapomniane — atrakcja dla całej rodziny.</p>
+      <div class="zoo-btns">
+        <a href="#lead"            class="btn-gold"  data-i18n="zoo_cta">Zarezerwuj wizytę →</a>
+        <a href="tel:+48123456789" class="btn-forest" data-i18n="cta_call">📞 Zadzwoń</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="steps-section fade-in">
+  <div class="wrap">
+    <div class="tag-label center" data-i18n="how_tag">Jak zarezerwować</div>
+    <h2 class="section-title" data-i18n="how_title">3 proste kroki</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <h3 data-i18n="step1_title">Zadzwoń lub napisz</h3>
+        <p data-i18n="step1_desc">Skontaktuj się telefonicznie lub przez formularz — powiemy o dostępności.</p>
+      </div>
+      <div class="step-arr">→</div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <h3 data-i18n="step2_title">Wybierz datę i atrakcje</h3>
+        <p data-i18n="step2_desc">Altanka, grill, wędka — zarezerwuj to, czego potrzebujesz.</p>
+      </div>
+      <div class="step-arr">→</div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <h3 data-i18n="step3_title">Przyjedź i ciesz się!</h3>
+        <p data-i18n="step3_desc">Czekamy na Ciebie! Przywieź jedzenie lub kup na miejscu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEAD FORM ── -->
+<section id="lead" class="lead-section fade-in">
+  <div class="wrap lead-inner">
+    <div class="lead-left">
+      <div class="tag-label" data-i18n="lead_tag">Oferta powitalna</div>
+      <h2 data-i18n="lead_title">Zostaw numer<br>i odbierz <em>prezent</em></h2>
+      <ul class="gift-list">
+        <li><span>🍦</span><span data-i18n="lead_gift1">Darmowe lody dla dziecka przy pierwszej wizycie</span></li>
+        <li><span>🔥</span><span data-i18n="lead_gift2">Zniżka 10 zł na wynajem grilla</span></li>
+        <li><span>📅</span><span data-i18n="lead_gift3">Priorytetowa rezerwacja altanki</span></li>
+      </ul>
+      <p class="lead-fine" data-i18n="lead_fine">*Oferta dla nowych klientów. Podaj numer przy rejestracji na miejscu.</p>
+    </div>
+    <div class="lead-card">
+      <h3 data-i18n="lead_form_title">Zarezerwuj i odbierz prezent</h3>
+      <form id="lead-form" novalidate>
+        <div class="field">
+          <label data-i18n="lead_name_label">Imię</label>
+          <input type="text" name="name" data-i18n-ph="lead_name_ph" placeholder="Jan">
+        </div>
+        <div class="field">
+          <label data-i18n="lead_phone_label">Numer telefonu *</label>
+          <input type="tel" name="phone" placeholder="+48 600 000 000" required>
+        </div>
+        <div class="field">
+          <label data-i18n="lead_date_label">Planowana data wizyty</label>
+          <input type="date" name="date">
+        </div>
+        <div class="field">
+          <label data-i18n="lead_interest_label">Co cię interesuje?</label>
+          <select name="interest">
+            <option value="table"   data-i18n="opt_table">Altanka z ławkami</option>
+            <option value="bbq"     data-i18n="opt_bbq">Grill / Mangal</option>
+            <option value="fishing" data-i18n="opt_fishing">Wędkarstwo</option>
+            <option value="all"     data-i18n="opt_all">Wszystko naraz</option>
+          </select>
+        </div>
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span data-i18n="lead_consent">Wyrażam zgodę na kontakt telefoniczny i SMS.</span>
+        </label>
+        <button type="submit" class="btn-submit" data-i18n="lead_submit">🎁 Zarezerwuj i odbierz prezent</button>
+        <p class="form-ok" id="form-ok" data-i18n="form_success" style="display:none;">✅ Dziękujemy! Zadzwonimy wkrótce.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT & MAP ── -->
+<section id="contact" class="contact-section fade-in">
+  <div class="wrap contact-inner">
+    <div class="contact-info">
+      <div class="tag-label" data-i18n="contact_tag">Kontakt</div>
+      <h2 data-i18n="contact_title">Znajdź nas</h2>
+      <div class="c-item">
+        <span>📞</span>
+        <div>
+          <strong data-i18n="contact_phone_label">Telefon</strong>
+          <a href="tel:+48123456789">+48 123 456 789</a>
+        </div>
+      </div>
+      <div class="c-item">
+        <span>📍</span>
+        <div>
+          <strong data-i18n="contact_addr_label">Adres</strong>
+          <span>Zaborowie, k. Radomia<br>Mazowieckie, Polska</span>
+        </div>
+      </div>
+      <div class="c-item">
+        <span>🕐</span>
+        <div>
+          <strong data-i18n="contact_hours_label">Godziny</strong>
+          <span data-i18n="contact_hours">Codziennie 9:00–20:00 (maj–wrzesień)</span>
+        </div>
+      </div>
+      <div class="c-btns">
+        <a href="tel:+48123456789"    class="btn-gold"  data-i18n="cta_call">📞 Zadzwoń</a>
+        <a href="https://wa.me/48123456789" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4!2d20.97!3d51.37!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNfKwMjInNDcuMSJOIDIwwrA1OCczOS43IkU!5e0!3m2!1spl!2spl!4v1620000000000!5m2!1spl!2spl"
+        width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" title="Mapa">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <div class="footer-logo" data-i18n="site_name">Holiday Village</div>
+      <p data-i18n="footer_tagline">Dwa jeziora, jeden cel: Twój spokój.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="#offer"   data-i18n="nav_offer">Oferta</a>
+      <a href="#prices"  data-i18n="nav_prices">Cennik</a>
+      <a href="#zoo"     data-i18n="nav_zoo">Mini Zoo</a>
+      <a href="#contact" data-i18n="nav_contact">Kontakt</a>
+      <a href="#lead"    data-i18n="cta_book">Rezerwacja</a>
+    </nav>
+    <div class="footer-contact">
+      <a href="tel:+48123456789">+48 123 456 789</a>
+      <span>Zaborowie, Mazowieckie</span>
+    </div>
+  </div>
+  <div class="footer-copy">© 2025 Holiday Village Resort. All rights reserved.</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
