@@ -83,6 +83,9 @@ const T = {
     lead_consent: "Wyrażam zgodę na kontakt telefoniczny i SMS w celach rezerwacji.",
     lead_submit: "🎁 Zarezerwuj i odbierz prezent",
     form_success: "✅ Dziękujemy! Zadzwonimy wkrótce.",
+    modal_title: "Dziękujemy!",
+    modal_desc: "Twoje zgłoszenie zostało przyjęte. Zadzwonimy wkrótce. Do zobaczenia w Holiday Village! 🌿",
+    modal_close: "Zamknij",
 
     contact_tag: "Kontakt", contact_title: "Znajdź nas",
     contact_phone_label: "Telefon", contact_addr_label: "Adres",
@@ -180,6 +183,9 @@ const T = {
     lead_consent: "Даю згоду на контакт по телефону та SMS для бронювання.",
     lead_submit: "🎁 Забронювати та отримати подарунок",
     form_success: "✅ Дякуємо! Зателефонуємо вам незабаром.",
+    modal_title: "Дякуємо!",
+    modal_desc: "Вашу заявку прийнято. Зателефонуємо найближчим часом. До зустрічі в Holiday Village! 🌿",
+    modal_close: "Закрити",
 
     contact_tag: "Контакти", contact_title: "Знайди нас",
     contact_phone_label: "Телефон", contact_addr_label: "Адреса",
@@ -277,6 +283,9 @@ const T = {
     lead_consent: "I agree to be contacted by phone and SMS for booking.",
     lead_submit: "🎁 Book & Get Your Gift",
     form_success: "✅ Thank you! We'll call you shortly.",
+    modal_title: "Thank you!",
+    modal_desc: "Your request has been received. We'll call you shortly. See you at Holiday Village! 🌿",
+    modal_close: "Close",
 
     contact_tag: "Contact", contact_title: "Find Us",
     contact_phone_label: "Phone", contact_addr_label: "Address",
@@ -374,6 +383,9 @@ const T = {
     lead_consent: "Я согласен на контакт по телефону и SMS для бронирования.",
     lead_submit: "🎁 Забронировать и получить подарок",
     form_success: "✅ Спасибо! Позвоним вам в ближайшее время.",
+    modal_title: "Спасибо!",
+    modal_desc: "Ваша заявка принята. Позвоним в ближайшее время. До встречи в Holiday Village! 🌿",
+    modal_close: "Закрыть",
 
     contact_tag: "Контакты", contact_title: "Найди нас",
     contact_phone_label: "Телефон", contact_addr_label: "Адрес",
@@ -452,8 +464,22 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 
   // lead form
-  const form = document.getElementById('lead-form');
-  const ok   = document.getElementById('form-ok');
+  const form    = document.getElementById('lead-form');
+  const modal   = document.getElementById('success-modal');
+  const modalClose = document.getElementById('modal-close-btn');
+
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (modal) modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
   if (form) {
     form.addEventListener('submit', async e => {
       e.preventDefault();
@@ -479,8 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       btn.disabled = false;
       form.reset();
-      ok.style.display = 'block';
-      setTimeout(() => { ok.style.display = 'none'; }, 7000);
+      openModal();
     });
   }
 });
