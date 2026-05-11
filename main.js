@@ -455,17 +455,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('lead-form');
   const ok   = document.getElementById('form-ok');
   if (form) {
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async e => {
       e.preventDefault();
-      const fd = new FormData(form);
+      const fd  = new FormData(form);
+      const btn = form.querySelector('[type=submit]');
+      btn.disabled = true;
+
       const entry = {
-        name: fd.get('name'), phone: fd.get('phone'),
-        date: fd.get('date'), interest: fd.get('interest'),
-        lang, ts: new Date().toISOString()
+        name:     fd.get('name'),
+        phone:    fd.get('phone'),
+        date:     fd.get('date'),
+        interest: fd.get('interest'),
+        lang,
       };
-      const leads = JSON.parse(localStorage.getItem('hv_leads') || '[]');
-      leads.push(entry);
-      localStorage.setItem('hv_leads', JSON.stringify(leads));
+
+      try {
+        await fetch('send.php', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(entry),
+        });
+      } catch (_) {}
+
+      btn.disabled = false;
       form.reset();
       ok.style.display = 'block';
       setTimeout(() => { ok.style.display = 'none'; }, 7000);
