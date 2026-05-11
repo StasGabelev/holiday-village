@@ -33,13 +33,13 @@ $interest = esc($data['interest'] ?? '—');
 $lang     = strtoupper(esc($data['lang'] ?? '?'));
 $ts       = (new DateTime('now', new DateTimeZone('Europe/Warsaw')))->format('d.m.Y H:i');
 
-$text = "🌿 *Nowa rezerwacja — Holiday Village*\n\n"
-      . "👤 *Imię:* {$name}\n"
-      . "📞 *Telefon:* {$phone}\n"
-      . "📅 *Data wizyty:* {$date}\n"
-      . "🎯 *Zainteresowanie:* {$interest}\n"
-      . "🌐 *Język:* {$lang}\n"
-      . "🕐 *Czas:* {$ts}";
+$text = "🌿 *Новая заявка — Holiday Village*\n\n"
+      . "👤 *Имя:* {$name}\n"
+      . "📞 *Телефон:* {$phone}\n"
+      . "📅 *Дата визита:* {$date}\n"
+      . "🎯 *Интерес:* {$interest}\n"
+      . "🌐 *Язык:* {$lang}\n"
+      . "🕐 *Время:* {$ts}";
 
 $payload = json_encode([
     'chat_id'    => $CHAT_ID,
